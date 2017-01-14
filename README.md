@@ -1,6 +1,13 @@
+[![license](https://img.shields.io/github/license/wattazoum/docker-springboot-runner.svg?style=flat-square)]()
+
+[![Docker Automated buil](https://img.shields.io/docker/automated/wattazoum/springboot-runner.svg?style=flat-square)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/wattazoum/springboot-runner.svg?style=flat-square)]()
+[![Docker Stars](https://img.shields.io/docker/stars/wattazoum/springboot-runner.svg?style=flat-square)]()
+
 # SPRINGBOOT Runner
 
-This image is more that just a [spring boot] runner.
+This image is more that just a [Spring Boot](https://projects.spring.io/spring-boot/) runner. 
+I can launch any java command.
 
 I created it first because I needed to launch a spring boot application in a container.
 But I didn't want to:
