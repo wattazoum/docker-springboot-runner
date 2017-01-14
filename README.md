@@ -16,6 +16,32 @@ But I didn't want to:
 * recreate an image for every version
 * customize the `docker run` command per environment.
 
+## Usage
+
+### Long story short
+
+> `docker run -name <myapp> -v <myappfolder>:/app -p 8080:8080 springboot-runner`
+> 
+> Then access to http://localhost:8080 .
+
+
+### Using the `java` command
+
+This is not the purpose of this image, but if needed, you can use 
+it to launch a `java` custom command.
+
+```
+$ docker run --rm -it springboot-runner -version
+
+openjdk version "1.8.0_111-internal"
+OpenJDK Runtime Environment (build 1.8.0_111-internal-alpine-r0-b14)
+OpenJDK 64-Bit Server VM (build 25.111-b14, mixed mode)
+```
+
+Every command passed to the container will directly be fed to the `java` executable 
+inside the container.
+
+
 ## Caracteristics
 
 Specificities of this image consist in:
@@ -62,30 +88,4 @@ APP_ARGS=""--loglevel=debug
 > **Note**: 
 > The content of the file can be more complex than the sample above. It will be 
 > interpreted by `/bin/sh` so all of the _DASH_ syntax is supported
-
-## Usage
-
-### Long story short
-
-> `docker run -name <myapp> -v <myappfolder>:/app -p 8080:8080 springboot-runner`
-> 
-> Then access to http://localhost:8080 .
-
-
-### Using the `java` command
-
-This is not the purpose of this image, but if needed, you can use 
-it to launch a `java` custom command.
-
-```
-$ docker run --rm -it springboot-runner -version
-
-openjdk version "1.8.0_111-internal"
-OpenJDK Runtime Environment (build 1.8.0_111-internal-alpine-r0-b14)
-OpenJDK 64-Bit Server VM (build 25.111-b14, mixed mode)
-```
-
-Every command passed to the container will directly be fed to the `java` executable 
-inside the container.
-
 

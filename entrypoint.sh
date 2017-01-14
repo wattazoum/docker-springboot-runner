@@ -28,17 +28,17 @@ fi
 
 TMP_JARS_LIST=/tmp/jars_list 
 
-find /app -maxdepth 1 -name '*.jar' > $TMP_JARS_LIST
+find /app -maxdepth 1 -regex '.*.[jw]ar$' > $TMP_JARS_LIST
 nb_jars=$(cat $TMP_JARS_LIST | wc -l)
 if [ $nb_jars -gt 1 ]
 then
-    echo 'ERROR: You may only have one jar in the /app folder'
+    echo 'ERROR: You may only have one jar/war in the /app folder'
     echo '==================================================='
     cat $TMP_JARS_LIST
     exit 1
 elif [ $nb_jars -eq 0 ]
 then
-    echo 'ERROR: There should be one and only one jar in the /app folder'
+    echo 'ERROR: There should be one and only one jar/war in the /app folder'
     echo '=============================================================='
     exit 1
 else 
