@@ -1,10 +1,12 @@
-[![license](https://img.shields.io/github/license/wattazoum/docker-springboot-runner.svg?style=flat-square)]()
+[![license](https://img.shields.io/github/license/wattazoum/docker-springboot-runner.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/wattazoum/springboot-runner.svg?style=flat-square)]()
-[![Docker Pulls](https://img.shields.io/docker/pulls/wattazoum/springboot-runner.svg?style=flat-square)]()
-[![Docker Stars](https://img.shields.io/docker/stars/wattazoum/springboot-runner.svg?style=flat-square)]()
+[![Docker Automated buil](https://img.shields.io/docker/automated/wattazoum/springboot-runner.svg?style=flat-square)](https://hub.docker.com/r/wattazoum/springboot-runner/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/wattazoum/springboot-runner.svg?style=flat-square)](https://hub.docker.com/r/wattazoum/springboot-runner/)
+[![Docker Stars](https://img.shields.io/docker/stars/wattazoum/springboot-runner.svg?style=flat-square)](https://hub.docker.com/r/wattazoum/springboot-runner/)
 
 # SPRINGBOOT Runner
+
+Based on [`openjdk:jdk-alpine`](https://hub.docker.com/_/openjdk/) docker image. 
 
 This image is more that just a [Spring Boot](https://projects.spring.io/spring-boot/) runner. 
 I can launch any java command.
