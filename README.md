@@ -54,11 +54,13 @@ by user `uid=1000` on the docker host.
 ### a volume `/app`
 
 The `WORKDIR` of the container. This folder might contain one and
-only one jar, which is the springboot application jar.  
+only one jar/war, which is the springboot application jar.  
 Creating a `/app/config/` directory will be automatically detected by Springboot 
-as the configuration folder.  
+as the configuration folder. See SpringBoot documentation on [externalizing configuration]. 
 We also recommend the creation of the `logs` folder inside the `/app` folder.
-The /app folder may also contain the `setenv.sh` file mentionned bellow.
+The `/app` folder may also contain the `setenv.sh` file mentionned bellow.
+
+[externalizing configuration]: http://docs.spring.io/spring-boot/docs/1.5.x/reference/html/boot-features-external-config.html
 
 ### a port 8080
 
@@ -82,10 +84,11 @@ The following options are available (both optional):
 Here is an exemple of content: 
 ```
 JAVA_OPTS="-Xmx1g -Dfile.encoding=utf8"
-APP_ARGS=""--loglevel=debug
+APP_ARGS="--loglevel=debug"
 ```
 
 > **Note**: 
 > The content of the file can be more complex than the sample above. It will be 
 > interpreted by `/bin/sh` so all of the _DASH_ syntax is supported
+
 
