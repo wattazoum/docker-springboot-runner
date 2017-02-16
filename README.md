@@ -6,7 +6,7 @@
 
 # SPRINGBOOT Runner
 
-Based on [`openjdk:jdk-alpine`](https://hub.docker.com/_/openjdk/) docker image. 
+Based on [`openjdk:jre-alpine`](https://hub.docker.com/_/openjdk/) docker image. 
 
 This image is more that just a [Spring Boot](https://projects.spring.io/spring-boot/) runner. 
 I can launch any java command.

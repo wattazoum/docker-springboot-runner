@@ -1,4 +1,4 @@
-FROM openjdk:jdk-alpine
+FROM openjdk:jre-alpine
 MAINTAINER Oumar Aziz OUATTARA (wattazoum)
 
 RUN adduser -S -u 1000 springboot && \
