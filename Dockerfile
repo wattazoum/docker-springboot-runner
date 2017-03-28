@@ -1,4 +1,4 @@
-FROM openjdk:jre-alpine
+FROM openjdk:8u121-jre-alpine
 MAINTAINER Oumar Aziz OUATTARA (wattazoum)
 
 RUN adduser -S -u 1000 springboot && \
@@ -6,7 +6,6 @@ RUN adduser -S -u 1000 springboot && \
     chown -R springboot /app
 
 ADD entrypoint.sh /usr/local/bin/
-
 
 USER springboot
 
