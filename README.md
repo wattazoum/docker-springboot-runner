@@ -6,7 +6,7 @@
 
 # SPRINGBOOT Runner
 
-Based on [`openjdk:jre-alpine`](https://hub.docker.com/_/openjdk/) docker image. 
+> Based on [`openjdk:8u121-jre-alpine`](https://hub.docker.com/_/openjdk/) docker image. 
 
 This image is more that just a [Spring Boot](https://projects.spring.io/spring-boot/) runner. 
 I can launch any java command.
@@ -91,4 +91,14 @@ APP_ARGS="--loglevel=debug"
 > The content of the file can be more complex than the sample above. It will be 
 > interpreted by `/bin/sh` so all of the _DASH_ syntax is supported
 
+## Changelog
+
+### v1.1 
+
+* JRE is **8r121**
+* Integration of **fontconfig** and **ttf-dejavu** due to the [following JRE fontconfig bug](https://github.com/docker-library/openjdk/issues/73)
+
+### v1.0
+
+* JRE is **8r111**
 
