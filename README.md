@@ -20,7 +20,7 @@ But I didn't want to:
 
 ### Long story short
 
-> `docker run -name <myapp> -v <myappfolder>:/app -p 8080:8080 springboot-runner`
+> `docker run -name <myapp> -v <myappfolder>:/app -p 8080:8080 wattazoum/springboot-runner`
 > 
 > Then access to http://localhost:8080 .
 
@@ -31,7 +31,7 @@ This is not the purpose of this image, but if needed, you can use
 it to launch a `java` custom command.
 
 ```
-$ docker run --rm -it springboot-runner -version
+$ docker run --rm -it wattazoum/springboot-runner -version
 
 openjdk version "1.8.0_111-internal"
 OpenJDK Runtime Environment (build 1.8.0_111-internal-alpine-r0-b14)
@@ -61,6 +61,16 @@ We also recommend the creation of the `logs` folder inside the `/app` folder.
 The `/app` folder may also contain the `setenv.sh` file mentionned bellow.
 
 [externalizing configuration]: http://docs.spring.io/spring-boot/docs/1.5.x/reference/html/boot-features-external-config.html
+
+> **Note:** The /app folder seen in the container will usually be a storage mapped to an external
+> resource (docker storage, host folder ...). So creating a subdirectory can be done externally.
+> 
+> Now if you want to play with the internal of the container, you can launch:
+> ```
+> docker run -it --rm --entrypoint /bin/sh wattazoum/springboot-runner
+> ```
+> You can launch `/usr/local/bin/entrypoint.sh` to test the normal behavior of the container.
+
 
 ### a port 8080
 
